@@ -1,0 +1,379 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* Add fonts from the app's server 
+    @font-face {                
+      font-family: 'FontName';
+      src: url('FontName.woff2') format('woff2');
+    } 
+    ...or hosted services like Google Fonts 
+    @import url(//fonts.googleapis.com/css?family=Font+Name);
+  */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+    /* @import 'node_modules/modern-normalize/modern-normalize.css'; */
+          /* npm install modern-normalize
+            Resets elements for browser consistency.  
+            https://www.npmjs.com/package/modern-normalize
+          */         
+    
+    /* Component-specific stylesheets, if any. 
+      @import "component1.css";   
+    */
+  
+  /*   ----- Variables  -----  */
+  :root {
+      --periwinkle: rgb(171, 199, 250);
+      --babyBlue: rgb(203, 224, 253);
+      --navyBlue: rgb(60, 84, 115);
+      --beige: rgba(227, 223, 224, 0.6);
+      --armyGreen: rgb(50, 59, 14);
+      --olive: rgb(150, 164, 128);
+    /*    --custom-color-name:;
+      --custom-embellishment-name:; */
+    }
+    
+    /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+    body {       /* Can alternatively define in html {} or :root {} */
+      background-color:;
+      background-image: url(images/cliff-view-sanpokong-hongkong.jpg); 
+      /* shortcut: background-repeat: no-repeat; added to url*/
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: top left;
+      background-repeat:no-repeat;
+      color: var(--armyGreen); 
+      font-family:'Roboto', sans-serif; /* Define with at least one font name and its related generic family name.*/
+      margin:0 auto 0 auto;  /* top, right, bottom, left*/
+      padding: 0 2% 0 2%;
+      max-width:80%;
+    }
+    
+    /*  ----- Page layout blocks -----  */
+    header {
+      background-color: var(--armyGreen);
+      margin: 0;
+      padding: 1% 0% 1% 5%;
+      color: var(--periwinkle);
+      border: 2px solid var(--periwinkle);
+    }
+    header img {
+      size: fixed;
+      width:50px; 
+      padding: 0 2% 0 0;
+    }
+    main {
+      background-color: var(--beige);
+      padding: 3%;
+    }
+    section {
+      background-color: var(--beige);
+    }
+      article {
+        padding: 0 5% 1% 5%;
+      }
+        #topic1 {}
+        #topic2 {}
+    div {}
+    aside {}
+    footer{
+      background-color: var(--armyGreen);
+      border: 2px solid var(--periwinkle);
+      margin: 0; 
+      padding: 3% 0% 1% 5%; /* top, right, bottom, left*/
+      color: var(--periwinkle);
+    }
+    
+    /* ----- Anchors ----- Text links */
+  /*  a {}
+    a:link {}
+    a:hover {}
+    a:active {}
+    a:visited {} 
+    
+    /*  ----- Navigation ----- Override text links for navigation only.  */
+    nav {
+      text-align: center;
+      background-color: var(--beige);
+      padding:1% 0 0 0;
+      margin: 0;
+    }
+    nav a {
+      background-color: var(--babyBlue);
+      color: var(--navyBlue);
+      border: 2px solid var(--navyBlue);
+      font-weight:bold;
+      text-decoration:none;
+    /*   vertical-align:middle; */
+      padding: 1%;
+      margin:0;
+    }
+    nav a:hover {
+      background-color: var(--navyBlue);
+      color:var(--babyBlue);
+      border: 2px solid var(--babyBlue);
+    }
+    
+    nav.local {
+      background-color: transparent;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      margin: 0;
+      padding: 1% 0 2% 0;
+    }
+    nav.local a {
+      background-color: transparent;
+      color: var(--navyBlue);
+      font-weight:bold;
+      text-decoration:none;
+    /*   vertical-align:middle; */
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-left: 2px solid var(--navyBlue);
+      border-right: 2px solid var(--navyBlue);
+      padding:1%; 
+      margin:0;
+    }
+    nav.local a:hover {
+      border-bottom: 4px solid var(--periwinkle);
+      border-top: 4px solid var(--periwinkle);
+      border-left: 2px solid transparent;
+      border-right: 2px solid transparent;
+    }
+  
+    /*  -----  Typography  ----- */
+    p {}
+    br {}
+    ol, ul, dl {}
+    li {}
+    dt {}
+    dd {}
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family:'Merriweather', serif;
+    } 
+    h1 {}
+    h2 {
+      margin: 0;
+      padding: 1%;
+      text-align: center;
+      color: var(--olive);
+      text-shadow: -1px 0 var(--armyGreen), 0 1px var(--armyGreen), 1px 0 var(--armyGreen), 0 -1px var(--armyGreen);
+    }
+    h3 {
+      color: var(--olive);
+      text-shadow: -1px 0 var(--armyGreen), 0 1px var(--armyGreen), 1px 0 var(--armyGreen), 0 -1px var(--armyGreen);
+      border-bottom: 5px solid var(--olive);
+    }
+  /*  h4 {}
+    h5 {}
+    h6 {}
+    
+    abbr {}
+    acronym {}
+    address {}
+    blockquote {}
+      q {}
+      cite {}
+    em {}
+    hr {}
+    mark {}
+    s {}
+    span {}
+    strong {}
+    sub {}
+    sup {}
+    time {}
+    
+    /*  ----- Coding or instructional typography ----- */
+    pre {}
+    code {}
+    kbd {}
+    samp {}
+    var {}
+    del {} 
+    ins {}
+    
+    /*  ----- Table ----- */
+    table {
+      padding: 5% 0% 5% 0%;
+      width: 100%;
+    }
+    caption {
+      color: var(--navyBlue);
+    }
+    thead {}
+    tbody {}
+    tfoot {}
+    tr {}
+      tr:nth-child(even) {}
+    th {
+      border-top: 2px dashed var(--olive);
+      border-bottom: 2px dashed var(--olive);
+      text-align: left;
+      padding: 3%;
+      width: 200px;
+      color: var(--armyGreen);
+    }
+    th:nth-child(3) {
+      text-align: right;
+    }
+    td {
+      border-bottom: 2px dotted var(--olive);
+      padding: 2%;
+    }
+      td:nth-child(1) {
+        width: 25%;
+      }
+      td:nth-child(3) {
+        text-align: right;
+        width: 25%;
+      }
+  
+    colgroup {}
+    data {}
+    datalist {}
+    
+    
+    /*  ----- Form ----- */
+    form {
+      display:flex;
+      flex-flow: row wrap;
+        }
+    fieldset {
+      border: 2px solid var(--navyBlue);  
+      background-color:var(--beige);  
+      margin: 1% 0% 5% 2%;
+      padding:3%;
+      border-radius: 10px;  
+    }
+      legend {
+        color: var(--olive);
+        text-shadow: -1px 0 var(--armyGreen), 0 1px var(--armyGreen), 1px 0 var(--armyGreen), 0 -1px var(--armyGreen);
+        font-size:120%;
+      }
+    label {
+      display:block;
+      margin-top: 3%;
+      color: var(--armyGreen);
+    }
+      button, input, select, textarea {
+        font-size:115%;
+        padding:1.5%;
+        font-family: inherit;
+      }
+      input[type="text"], input[type="email"], textarea {
+        width: 90%;
+        padding: 3%;
+      }
+      input[type="radio"], input[type="checkbox"] {
+        transform: scale(1.5);
+      }
+      textarea {
+        height: 175px;
+      }
+      :focus{
+        background-color: var(--babyBlue);
+      }
+      :required {
+        border:2px inset red;
+      }
+      label.required:after {
+        content:" * ";
+        color:red;
+      }
+      ::placeholder {
+        color: var(--navyBlue);
+      }
+      button {
+        border-radius: 30px;
+        border-width: 5px;
+        border-color: var(--babyBlue);
+        background-color: var(--navyBlue);
+        color:var(--babyBlue);
+        width: fit-content;
+        margin-top: 5%;
+        margin-left: 20%;
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+      button:hover {
+        border-style: inset;
+        color:var(--beige);
+      }
+      output {}
+      meter {}
+      progress {}
+        optgroup {}
+        option {}
+   
+    /* ----- Media ----- */
+    figure {}
+      figcaption {}
+      figure img {}
+    svg {}
+    picture {}
+      source {}
+    iframe {}
+    video {}
+    audio {}
+    embed {}
+    object {}
+    
+    /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+    .gallery {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      padding: 0;
+  
+    }
+  .gallery figure {
+    width: 310px;
+    margin:1%;
+    padding:0;
+    border:1px solid var(--armyGreen);
+    background-color: var(--armyGreen);
+  }
+  .gallery img {
+    width:100%;
+  }
+  .gallery figcaption {
+    display:block;
+    padding:1%;
+    color: var(--periwinkle);
+  }
+    
+    .floatright {}
+    .floatleft {}
+    .center-middle {}
+    
+    .ten {}
+    .twenty {}
+    .thirty {}
+    .forty {}
+    .fifty {}
+    .sixty {}
+    .seventy {}
+    .eighty {}
+    
+    .radius {}
+    .circle {}
+    .boxshadow {}
+    .tshadow {} 
+    .gradient {}
+    .shape {}
+    
+    @keyframes App-logo {}
+    
+    /*   ===== TABLET  media query overrides mobile styles ===== */
+    @media all and (min-width: 600px) {}
+    
+    /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+    @media all and (min-width: 1080px) {}
+    
+    /*   ===== PRINT  media query overrides previous styles =====  */
+    @media print {}
